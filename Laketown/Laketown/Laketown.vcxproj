@@ -105,6 +105,7 @@
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile />
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -195,16 +196,22 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ResoureManager\FileReader.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ResoureManager\ReadDirectory.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ResoureManager\FileReader.h" />
     <ClInclude Include="GameManager.h" />
+    <ClInclude Include="ResoureManager\ReadDirectory.h" />
+    <ClInclude Include="ResoureManager\IFileType.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="TestScene.h" />
     <ClInclude Include="Timer.h" />
+    <ClInclude Include="Vector.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

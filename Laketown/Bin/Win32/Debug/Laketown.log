@@ -1,6 +1,7 @@
-﻿  GameManager.cpp
-  main.cpp
-  Timer.cpp
-  Window.cpp
-  Generating Code...
-  Laketown.vcxproj -> D:\GitHub\Math-Assignment_1\Math_Assignment_1\Laketown\Laketown\\Builds\Win32\Debug\Laketown.exe
+﻿  ReadDirectory.cpp
+d:\github\math-assignment_1\math_assignment_1\laketown\laketown\laketown\resouremanager\readdirectory.cpp(15): error C3083: 'filesystem': the symbol to the left of a '::' must be a type
+d:\github\math-assignment_1\math_assignment_1\laketown\laketown\laketown\resouremanager\readdirectory.cpp(15): error C2039: 'directory_entry': is not a member of 'std'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\iterator(16): note: see declaration of 'std'
+d:\github\math-assignment_1\math_assignment_1\laketown\laketown\laketown\resouremanager\readdirectory.cpp(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\github\math-assignment_1\math_assignment_1\laketown\laketown\laketown\resouremanager\readdirectory.cpp(15): error C2143: syntax error: missing ',' before '&'
+d:\github\math-assignment_1\math_assignment_1\laketown\laketown\laketown\resouremanager\readdirectory.cpp(17): error C2065: 'entry': undeclared identifier
