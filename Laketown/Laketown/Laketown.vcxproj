@@ -196,6 +196,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ResoureManager\CustomReader.cpp" />
+    <ClCompile Include="ResoureManager\ResourceManager.cpp" />
     <ClCompile Include="ResoureManager\FileReader.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="main.cpp" />
@@ -204,6 +206,8 @@
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ResoureManager\CustomReader.h" />
+    <ClInclude Include="ResoureManager\ResourceManager.h" />
     <ClInclude Include="ResoureManager\FileReader.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="ResoureManager\ReadDirectory.h" />
