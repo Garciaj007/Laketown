@@ -1,7 +1,19 @@
-﻿  ReadDirectory.cpp
-d:\github\math-assignment_1\math_assignment_1\laketown\laketown\laketown\resouremanager\readdirectory.cpp(15): error C3083: 'filesystem': the symbol to the left of a '::' must be a type
-d:\github\math-assignment_1\math_assignment_1\laketown\laketown\laketown\resouremanager\readdirectory.cpp(15): error C2039: 'directory_entry': is not a member of 'std'
-  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\iterator(16): note: see declaration of 'std'
-d:\github\math-assignment_1\math_assignment_1\laketown\laketown\laketown\resouremanager\readdirectory.cpp(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-d:\github\math-assignment_1\math_assignment_1\laketown\laketown\laketown\resouremanager\readdirectory.cpp(15): error C2143: syntax error: missing ',' before '&'
-d:\github\math-assignment_1\math_assignment_1\laketown\laketown\laketown\resouremanager\readdirectory.cpp(17): error C2065: 'entry': undeclared identifier
+﻿Build started 2019-02-21 23:23:21.
+     1>Project "D:\Development\C++\Laketown\Laketown\Laketown\Laketown.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "D:\Development\C++\Laketown\Laketown\\Bin\Win32\Debug\Laketown.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         Laketown.vcxproj -> D:\Development\C++\Laketown\Laketown\\Builds\Win32\Debug\Laketown.exe
+       FinalizeBuildStatus:
+         Deleting file "D:\Development\C++\Laketown\Laketown\\Bin\Win32\Debug\Laketown.tlog\unsuccessfulbuild".
+         Touching "D:\Development\C++\Laketown\Laketown\\Bin\Win32\Debug\Laketown.tlog\Laketown.lastbuildstate".
+     1>Done Building Project "D:\Development\C++\Laketown\Laketown\Laketown\Laketown.vcxproj" (Build target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.06

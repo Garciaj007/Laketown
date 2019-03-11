@@ -1,7 +1,8 @@
 #ifndef CUSTOMREADER_H
 #define CUSTOMREADER_H
 #include <map>
-#include <memory>
+#include <memory> 
+#include "FileReader.h"
 class FileReader;
 class ReadDirectory;
 
@@ -21,7 +22,7 @@ namespace RESOURCE
 		void insertFileReader(FileReader* FileReader_);
 		void setRDirectory(std::shared_ptr<ReadDirectory*> RDirectory_);
 		std::map<std::string, FileReader> returnFileReaderList();
-		std::shared_ptr<const ReadDirectory*> returnDirectory() const;
+		std::shared_ptr<ReadDirectory*> returnDirectory() const;
 		~CustomReader();
 	};
 #endif 
