@@ -15,6 +15,7 @@ namespace RESOURCE
 		std::vector<std::string> nameFile;
 	public:
 		ReadDirectory();
+		~ReadDirectory();
 		void read_directory(const std::string& name, stringVec& v);
 		void readFile(const std::string& name);
 		inline std::vector<std::string>  returnFilenNames() { return nameFile;};

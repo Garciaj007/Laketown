@@ -1,6 +1,7 @@
 #include "GameManager.h"
 #include "TestScene.h"
 #include <iostream>
+#include <SDL_net.h>
 
 //Declaring Static Members
 SDL_Renderer* GameManager::renderer; ///An instance of the SDL_Renderer
@@ -74,7 +75,12 @@ bool GameManager::OnCreate() {
 bool GameManager::OnInit() {
 	//Check if libraries are functioning conrrectly...
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
-		std::cout << "SDL_Error: " << SDL_GetError() << std::endl;
+		std::cerr << "SDL_Error: " << SDL_GetError() << std::endl;
+		return false;
+	}
+
+	if (SDLNet_Init() < 0) {
+		std::cerr << "SDLNet_Error" << SDLNet_GetError() << std::endl;
 		return false;
 	}
 
@@ -113,5 +119,7 @@ void GameManager::OnDestroy() {
 	windowPtr->OnDestroy();
 
 	//Close Subsystems
+	SDLNet_Quit();
 	SDL_Quit();
 }
+

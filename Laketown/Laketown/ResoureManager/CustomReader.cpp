@@ -26,7 +26,7 @@ namespace RESOURCE
 		//return FileReader Map.
 		return FileReaderlist;
 	}
-	std::shared_ptr<const ReadDirectory*> CustomReader::returnDirectory() const
+	std::shared_ptr<ReadDirectory*> CustomReader::returnDirectory() const
 	{
 		//return ReadDirectory.
 		return Directory;

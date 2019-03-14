@@ -1,2 +1,11 @@
 
 Laketown/.vs/Laketown/v15/Browse.VC.opendb
+Laketown/Laketown/Laketown.vcxproj
+Laketown/Laketown/Laketown.vcxproj.filters
+*.filters
+*.vcxproj
+*.filters
+*.vcxproj
+Laketown/Laketown/Laketown.vcxproj
+Laketown/Bin/Win32/Debug/Laketown.tlog/unsuccessfulbuild
+Laketown/Laketown/External/lib/x64/SDL2.dll
