@@ -3,6 +3,7 @@
 
 #include <SDL_net.h>
 #include <vector>
+#include <map>
 #include <string>
 
 #define TIMEOUT 2000
@@ -10,11 +11,9 @@
 
 class ISocket {
 protected:
-	std::vector<UDPsocket> sockets;
-	std::vector<UDPpacket> packets;
-
 	virtual bool Send(UDPpacket* send, UDPpacket* response, uint32_t delay, uint8_t expect) = 0;
-	virtual bool Recieve(UDPpacket* recieved) = 0;
+	virtual bool Recieve(UDPpacket* recieved, uint32_t delay, uint8_t expect) = 0;
+	
 public:
 	virtual bool Connect(IPaddress* address) = 0;
 	virtual void Close(UDPsocket socket) = 0;

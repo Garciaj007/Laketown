@@ -6,8 +6,11 @@
 class ServerSocket : public ISocket
 {
 private:
+	std::map<UDPsocket, std::vector<UDPpacket>> connections;
+
 	bool Send(UDPpacket* send, UDPpacket* response, uint32_t delay, uint8_t expect);
-	bool Recieve(UDPpacket* recieved);
+	bool Recieve(UDPpacket* recieved, uint32_t delay, uint8_t expect);
+	bool CloseAll();
 public:
 	ServerSocket();
 	~ServerSocket();

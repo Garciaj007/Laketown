@@ -6,8 +6,11 @@
 class ClientSocket : public ISocket 
 {
 private:
+	UDPsocket socket;
+	UDPpacket packet;
+
 	bool Send(UDPpacket* send, UDPpacket* response, uint32_t delay, uint8_t expect);
-	bool Recieve(UDPpacket* recieved);
+	bool Recieve(UDPpacket* recieved, uint32_t delay, uint8_t expect);
 public:
 	ClientSocket();
 	~ClientSocket();

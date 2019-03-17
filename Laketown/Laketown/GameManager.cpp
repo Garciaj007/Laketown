@@ -2,6 +2,7 @@
 #include "TestScene.h"
 #include <iostream>
 #include <SDL_net.h>
+#include <sstream>
 
 //Declaring Static Members
 SDL_Renderer* GameManager::renderer; ///An instance of the SDL_Renderer
@@ -83,6 +84,34 @@ bool GameManager::OnInit() {
 		std::cerr << "SDLNet_Error" << SDLNet_GetError() << std::endl;
 		return false;
 	}
+
+	std::string decision;
+	std::cin >> decision;
+
+	while (true) {
+		std::cout << "HOST or CLIENT " << std::endl;
+
+		if (decision == "HOST") {
+			isHost = true;
+			break;
+		}
+		else if (decision == "CLIENT") {
+			isHost = false;
+			break;
+		}
+		else {
+			std::cout << "Invalid Selection" << std::endl;
+		}
+	}
+
+	if (isHost) {
+
+	}
+	else {
+	
+	}
+
+	
 
 	//Add SDL_IMG SDL_Video SDL_TTF SDL_Mixer etc...
 
