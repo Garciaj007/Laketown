@@ -2,20 +2,18 @@
 #define CLIENTSOCKET_H
 
 #include "ISocket.h"
+#include <vector>
 
 class ClientSocket : public ISocket 
 {
 private:
 	UDPsocket socket;
-	UDPpacket packet;
-
-	bool Send(UDPpacket* send, UDPpacket* response, uint32_t delay, uint8_t expect);
-	bool Recieve(UDPpacket* recieved, uint32_t delay, uint8_t expect);
+	IPaddress destination;
 public:
-	ClientSocket();
-	~ClientSocket();
+	ClientSocket() { }
+	~ClientSocket() { Close(socket); }
 	
-	bool Connect(IPaddress* address);
+	bool Connect(const char* host, uint16_t port);
 	void Close(UDPsocket socket);
 	bool Send(std::string* data);
 	bool Recieve(std::string* data);

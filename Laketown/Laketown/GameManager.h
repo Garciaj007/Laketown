@@ -18,13 +18,10 @@ private:
 	std::unique_ptr<Timer> timer;
 	std::unique_ptr<Scene> currentScene;///Curent Scene Attached
 
-	std::string port, host;
 	bool isHost;
 public:
 	//Defining Static members 
 	static SDL_Renderer* renderer;
-
-	IPaddress address;
 
 	//Events & Input
 	SDL_Event event;

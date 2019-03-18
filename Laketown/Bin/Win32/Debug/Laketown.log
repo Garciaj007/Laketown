@@ -1,19 +1,2 @@
-﻿Build started 2019-02-21 23:23:21.
-     1>Project "D:\Development\C++\Laketown\Laketown\Laketown\Laketown.vcxproj" on node 2 (Build target(s)).
-     1>InitializeBuildStatus:
-         Creating "D:\Development\C++\Laketown\Laketown\\Bin\Win32\Debug\Laketown.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-       ClCompile:
-         All outputs are up-to-date.
-       Link:
-         All outputs are up-to-date.
-         Laketown.vcxproj -> D:\Development\C++\Laketown\Laketown\\Builds\Win32\Debug\Laketown.exe
-       FinalizeBuildStatus:
-         Deleting file "D:\Development\C++\Laketown\Laketown\\Bin\Win32\Debug\Laketown.tlog\unsuccessfulbuild".
-         Touching "D:\Development\C++\Laketown\Laketown\\Bin\Win32\Debug\Laketown.tlog\Laketown.lastbuildstate".
-     1>Done Building Project "D:\Development\C++\Laketown\Laketown\Laketown\Laketown.vcxproj" (Build target(s)).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:00.06
+﻿  GameManager.cpp
+  Laketown.vcxproj -> D:\Development\C++\Laketown\Laketown\\Builds\Win32\Debug\Laketown.exe

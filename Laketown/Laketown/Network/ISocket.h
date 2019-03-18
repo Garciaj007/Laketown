@@ -6,16 +6,14 @@
 #include <map>
 #include <string>
 
-#define TIMEOUT 2000
-#define ERROR 0xff
+constexpr auto TIMEOUT = 2000;
+constexpr auto ERROR = 0xff;
+constexpr auto PACKET_SIZE = 65535;
 
 class ISocket {
-protected:
-	virtual bool Send(UDPpacket* send, UDPpacket* response, uint32_t delay, uint8_t expect) = 0;
-	virtual bool Recieve(UDPpacket* recieved, uint32_t delay, uint8_t expect) = 0;
 	
 public:
-	virtual bool Connect(IPaddress* address) = 0;
+	virtual bool Connect(const char* host, uint16_t port) = 0;
 	virtual void Close(UDPsocket socket) = 0;
 	virtual bool Send(std::string* data) = 0;
 	virtual bool Recieve(std::string* data) = 0;

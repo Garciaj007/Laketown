@@ -4,6 +4,10 @@
 #include <SDL_net.h>
 #include <sstream>
 
+#include "Network/ISocket.h"
+#include "Network/ClientSocket.h"
+#include "Network/ServerSocket.h"
+
 //Declaring Static Members
 SDL_Renderer* GameManager::renderer; ///An instance of the SDL_Renderer
 
@@ -85,33 +89,64 @@ bool GameManager::OnInit() {
 		return false;
 	}
 
-	std::string decision;
-	std::cin >> decision;
 
-	while (true) {
+	//DELETE ME
+	{
 		std::cout << "HOST or CLIENT " << std::endl;
 
-		if (decision == "HOST") {
-			isHost = true;
-			break;
+		std::string decision;
+
+		while (true) {
+			std::cin >> decision;
+
+			if (decision == "HOST") {
+				isHost = true;
+				break;
+			}
+			else if (decision == "CLIENT") {
+				isHost = false;
+				break;
+			}
+			else {
+				std::cout << "Invalid Selection" << std::endl;
+			}
 		}
-		else if (decision == "CLIENT") {
-			isHost = false;
-			break;
+
+		ISocket* socket;
+
+		if (isHost)
+			socket = new ServerSocket();
+		else
+			socket = new ClientSocket();
+
+		int port;
+
+		std::cout << "ENTER PORT #### ";
+		std::cin >> port;
+
+		socket->Connect("192.168.0.10", port);
+
+		std::string msg;
+
+		if (socket->Recieve(&msg)) {
+			std::cout << msg << std::endl;
+		}
+
+		if (isHost) {
+			std::cout << "Server" << std::endl;
+			msg = "Hello from Server";
+			socket->Send(&msg);
 		}
 		else {
-			std::cout << "Invalid Selection" << std::endl;
+			std::cout << "Client" << std::endl;
+			msg = "Hello from Client";
+			socket->Send(&msg);
 		}
-	}
 
-	if (isHost) {
-
+		if (socket->Recieve(&msg)) {
+			std::cout << msg << std::endl;
+		}	
 	}
-	else {
-	
-	}
-
-	
 
 	//Add SDL_IMG SDL_Video SDL_TTF SDL_Mixer etc...
 

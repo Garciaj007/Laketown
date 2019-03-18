@@ -2,21 +2,37 @@
 #define SERVERSOCKET_H
 
 #include "ISocket.h"
+#include <map>
+#include <set>
 
 class ServerSocket : public ISocket
 {
+	struct Connection {
+		//Members 
+		int id;
+		UDPsocket socket;
+		IPaddress address;
+
+		//Constructor
+		Connection(UDPsocket socket, IPaddress address) :socket(socket), address(address) { id = id++; }
+	};
+
+	struct ConnectionCompare {
+		bool operator()(const Connection& lhs, const Connection& rhs) const {
+			return lhs.id < rhs.id;
+		}
+	};
+
 private:
-	std::map<UDPsocket, std::vector<UDPpacket>> connections;
+	std::set<Connection, ConnectionCompare> connections;
 
-	bool Send(UDPpacket* send, UDPpacket* response, uint32_t delay, uint8_t expect);
-	bool Recieve(UDPpacket* recieved, uint32_t delay, uint8_t expect);
-	bool CloseAll();
 public:
-	ServerSocket();
-	~ServerSocket();
+	ServerSocket() { }
+	~ServerSocket() { CloseAll(); }
 
-	bool Connect(IPaddress* address);
+	bool Connect(const char* host, uint16_t port);
 	void Close(UDPsocket socket);
+	void CloseAll();
 	bool Send(std::string* data);
 	bool Recieve(std::string* data);
 };
