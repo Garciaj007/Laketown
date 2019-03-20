@@ -42,7 +42,7 @@ namespace RESOURCE
 	void ReadDirectory::listFiles(std::string Directory_)
 	{
 		stringVec v;
-		std::vector<Tile*> ObjectList;
+		//std::vector<Tile*> ObjectList;
 		std::string rootDirectory;
 		rootDirectory = Directory_;
 		read_directory(Directory_, v);

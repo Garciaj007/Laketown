@@ -1,6 +1,12 @@
 #include "GameManager.h"
 #include "TestScene.h"
 #include <iostream>
+#include <SDL_net.h>
+#include <sstream>
+
+#include "Network/ISocket.h"
+#include "Network/ClientSocket.h"
+#include "Network/ServerSocket.h"
 
 //Declaring Static Members
 SDL_Renderer* GameManager::renderer; ///An instance of the SDL_Renderer
@@ -74,8 +80,72 @@ bool GameManager::OnCreate() {
 bool GameManager::OnInit() {
 	//Check if libraries are functioning conrrectly...
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
-		std::cout << "SDL_Error: " << SDL_GetError() << std::endl;
+		std::cerr << "SDL_Error: " << SDL_GetError() << std::endl;
 		return false;
+	}
+
+	if (SDLNet_Init() < 0) {
+		std::cerr << "SDLNet_Error" << SDLNet_GetError() << std::endl;
+		return false;
+	}
+
+
+	//DELETE ME
+	{
+		std::cout << "HOST or CLIENT " << std::endl;
+
+		std::string decision;
+
+		while (true) {
+			std::cin >> decision;
+
+			if (decision == "HOST") {
+				isHost = true;
+				break;
+			}
+			else if (decision == "CLIENT") {
+				isHost = false;
+				break;
+			}
+			else {
+				std::cout << "Invalid Selection" << std::endl;
+			}
+		}
+
+		ISocket* socket;
+
+		if (isHost)
+			socket = new ServerSocket();
+		else
+			socket = new ClientSocket();
+
+		int port;
+
+		std::cout << "ENTER PORT #### ";
+		std::cin >> port;
+
+		socket->Connect("192.168.0.10", port);
+
+		std::string msg;
+
+		if (socket->Recieve(&msg)) {
+			std::cout << msg << std::endl;
+		}
+
+		if (isHost) {
+			std::cout << "Server" << std::endl;
+			msg = "Hello from Server";
+			socket->Send(&msg);
+		}
+		else {
+			std::cout << "Client" << std::endl;
+			msg = "Hello from Client";
+			socket->Send(&msg);
+		}
+
+		if (socket->Recieve(&msg)) {
+			std::cout << msg << std::endl;
+		}	
 	}
 
 	//Add SDL_IMG SDL_Video SDL_TTF SDL_Mixer etc...
@@ -113,5 +183,7 @@ void GameManager::OnDestroy() {
 	windowPtr->OnDestroy();
 
 	//Close Subsystems
+	SDLNet_Quit();
 	SDL_Quit();
 }
+

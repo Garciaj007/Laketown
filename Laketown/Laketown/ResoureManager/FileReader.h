@@ -1,19 +1,23 @@
 #ifndef FILEREADER_H
 #define FILEREADER_H
 #include "IFileType.h"
-
+#include <vector>
 
 using namespace std;
 
-class FileReader : public IFileType
+namespace RESOURCE
 {
-private:
-	std::vector<T> ObjectArray;
-public:
-	FileReader();
-	void createFile(IFileType FileType_);
-	void FileWrite(IFileType FileType_);
-	~FileReader();
-};
+	class FileReader
+	{
+	private:
+		//std::vector<T> ObjectArray;
+	public:
+		FileReader();
+		void createFile(IFileType* FileType_);
+		void readFile(IFileType* FileType_);
+		void FileWrite(IFileType* FileType_);
+		~FileReader();
+	};
 
 #endif
+}

@@ -17,6 +17,8 @@ private:
 	std::unique_ptr<Window> windowPtr;
 	std::unique_ptr<Timer> timer;
 	std::unique_ptr<Scene> currentScene;///Curent Scene Attached
+
+	bool isHost;
 public:
 	//Defining Static members 
 	static SDL_Renderer* renderer;
@@ -34,6 +36,7 @@ public:
 	void OnDestroy();
 	void Run();
 };
+
 
 
 #endif // !GAMEMANAGER_H
