@@ -205,23 +205,26 @@
   <ItemGroup>
     <ClCompile Include="Network\ClientSocket.cpp" />
     <ClCompile Include="Network\ServerSocket.cpp" />
-    <ClCompile Include="ResoureManager\CustomReader.cpp" />
-    <ClCompile Include="ResoureManager\ResourceManager.cpp" />
+    <ClCompile Include="ResourceManager\CustomReader.cpp" />
+    <ClCompile Include="ResourceManager\FileReader.cpp" />
+    <ClCompile Include="ResourceManager\ResourceManager.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="ResoureManager\ReadDirectory.cpp" />
+    <ClCompile Include="ResourceManager\ReadDirectory.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ResoureManager\ResourceFactory.h" />
+    <ClInclude Include="ResourceManager\FileReader.h" />
+    <ClInclude Include="ResourceManager\IFileType.h" />
+    <ClInclude Include="ResourceManager\ResourceFactory.h" />
     <ClInclude Include="Network\ClientSocket.h" />
     <ClInclude Include="Network\ISocket.h" />
     <ClInclude Include="Network\ServerSocket.h" />
-    <ClInclude Include="ResoureManager\CustomReader.h" />
-    <ClInclude Include="ResoureManager\ResourceManager.h" />
+    <ClInclude Include="ResourceManager\CustomReader.h" />
+    <ClInclude Include="ResourceManager\ResourceManager.h" />
     <ClInclude Include="GameManager.h" />
-    <ClInclude Include="ResoureManager\ReadDirectory.h" />
+    <ClInclude Include="ResourceManager\ReadDirectory.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="TestScene.h" />
     <ClInclude Include="Timer.h" />

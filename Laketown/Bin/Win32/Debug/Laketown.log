@@ -1,2 +1,6 @@
-﻿  GameManager.cpp
+﻿  CustomReader.cpp
+  FileReader.cpp
+  ResourceManager.cpp
+  ReadDirectory.cpp
+d:\development\c++\laketown\laketown\laketown\resourcemanager\resourcemanager.cpp(37): warning C4717: 'RESOURCE::ResourceManager::getAudioAssetsMap': recursive on all control paths, function will cause runtime stack overflow
   Laketown.vcxproj -> D:\Development\C++\Laketown\Laketown\\Builds\Win32\Debug\Laketown.exe

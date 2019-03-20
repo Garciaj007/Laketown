@@ -27,12 +27,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ResoureManager\ReadDirectory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ResoureManager\ResourceManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Network\ClientSocket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -43,6 +37,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Network\ServerSocket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager\CustomReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager\FileReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager\ReadDirectory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager\ResourceManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -65,15 +71,6 @@
     <ClInclude Include="Vector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ResoureManager\ReadDirectory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ResoureManager\ResourceManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ResoureManager\ResourceFactory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Network\ISocket.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -90,6 +87,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Network\ServerSocket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager\CustomReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager\FileReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager\IFileType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager\ReadDirectory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager\ResourceFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager\ResourceManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
