@@ -5,14 +5,16 @@
 #include <iostream>
 #include <string>
 
-namespace MATH
+namespace Math
 {
+
 #ifndef SMALLEST
 #define SMALLEST 1.e-7f
 #endif
+
 #ifndef DEG_TO_RAD 
 #define DEG_TO_RAD (M_PI / 180.0f)
-#endif 
+#endif
 
 	struct Vec2
 	{
