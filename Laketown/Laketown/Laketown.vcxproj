@@ -203,6 +203,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Core\ECS\Entity.cpp" />
     <ClCompile Include="Network\ClientSocket.cpp" />
     <ClCompile Include="Network\ServerSocket.cpp" />
     <ClCompile Include="ResourceManager\CustomReader.cpp" />
@@ -215,6 +216,10 @@
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Core\Components\TransformComponent.h" />
+    <ClInclude Include="Core\ECS\Entity.h" />
+    <ClInclude Include="Core\ECS\IComponent.h" />
+    <ClInclude Include="Core\ECS\ISystem.h" />
     <ClInclude Include="ResourceManager\FileReader.h" />
     <ClInclude Include="ResourceManager\IFileType.h" />
     <ClInclude Include="ResourceManager\ResourceFactory.h" />
