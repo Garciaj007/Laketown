@@ -114,7 +114,7 @@ bool ServerSocket::Recieve(std::string* data) {
 				return false;
 			}
 			else if (status > 0) {
-				//Address of incoming packet 
+				//Address of incoming packet
 				std::cout << "Data Recieved from : " << SDLNet_ResolveIP(&packet->address) << " | " << SDLNet_Read16(&packet->address.port) << std::endl;
 
 				//Setting end of data to null

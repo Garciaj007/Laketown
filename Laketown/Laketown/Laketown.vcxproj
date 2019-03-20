@@ -207,7 +207,6 @@
     <ClCompile Include="Network\ServerSocket.cpp" />
     <ClCompile Include="ResoureManager\CustomReader.cpp" />
     <ClCompile Include="ResoureManager\ResourceManager.cpp" />
-    <ClCompile Include="ResoureManager\FileReader.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ResoureManager\ReadDirectory.cpp" />
@@ -215,15 +214,14 @@
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ResoureManager\ResourceFactory.h" />
     <ClInclude Include="Network\ClientSocket.h" />
     <ClInclude Include="Network\ISocket.h" />
     <ClInclude Include="Network\ServerSocket.h" />
     <ClInclude Include="ResoureManager\CustomReader.h" />
     <ClInclude Include="ResoureManager\ResourceManager.h" />
-    <ClInclude Include="ResoureManager\FileReader.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="ResoureManager\ReadDirectory.h" />
-    <ClInclude Include="ResoureManager\IFileType.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="TestScene.h" />
     <ClInclude Include="Timer.h" />

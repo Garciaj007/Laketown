@@ -4,7 +4,7 @@
 #include "ISocket.h"
 #include <vector>
 
-class ClientSocket : public ISocket 
+class ClientSocket : public ISocket
 {
 private:
 	UDPsocket socket;
@@ -20,4 +20,3 @@ public:
 };
 
 #endif
-

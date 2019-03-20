@@ -11,7 +11,7 @@ constexpr auto ERROR = 0xff;
 constexpr auto PACKET_SIZE = 65535;
 
 class ISocket {
-	
+
 public:
 	virtual bool Connect(const char* host, uint16_t port) = 0;
 	virtual void Close(UDPsocket socket) = 0;
@@ -21,4 +21,3 @@ public:
 
 
 #endif // !ISOCKET_H
-

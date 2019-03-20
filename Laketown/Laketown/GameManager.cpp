@@ -145,7 +145,7 @@ bool GameManager::OnInit() {
 
 		if (socket->Recieve(&msg)) {
 			std::cout << msg << std::endl;
-		}	
+		}
 	}
 
 	//Add SDL_IMG SDL_Video SDL_TTF SDL_Mixer etc...
@@ -159,7 +159,7 @@ void GameManager::Run() {
 	while (isRunning) {
 		if (SDL_PollEvent(&event) != 0) {
 
-			///Close Application if Exit Button Pressed 
+			///Close Application if Exit Button Pressed
 			if (event.type == SDL_QUIT)
 				isRunning = false;
 
@@ -186,4 +186,3 @@ void GameManager::OnDestroy() {
 	SDLNet_Quit();
 	SDL_Quit();
 }
-

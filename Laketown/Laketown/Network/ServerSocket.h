@@ -8,7 +8,7 @@
 class ServerSocket : public ISocket
 {
 	struct Connection {
-		//Members 
+		//Members
 		int id;
 		UDPsocket socket;
 		IPaddress address;

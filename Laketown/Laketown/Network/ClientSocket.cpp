@@ -4,15 +4,15 @@
 #include <iostream>
 
 bool ClientSocket::Connect(const char* host, uint16_t port) {
-	
+
 	//Opening port for socket
 	socket = SDLNet_UDP_Open(port);
 
 	if (!socket) {
 		std::cerr << "Failed SDLNet_UDP_Open : " << SDLNet_GetError() << std::endl;
 		return false;
-	} 
-	else 
+	}
+	else
 	{
 		std::cout << "Opened Port : " << SDLNet_Read16(&destination.port) << std::endl;
 	}
@@ -22,7 +22,7 @@ bool ClientSocket::Connect(const char* host, uint16_t port) {
 		std::cerr << "Failed SDLNet_ResolveHost : " << SDLNet_GetError() << std::endl;
 		return false;
 	}
-	else 
+	else
 	{
 		std::cout << "Destination Address : " << host << std::endl;
 	}
@@ -43,7 +43,7 @@ bool ClientSocket::Send(std::string* data) {
 		std::cerr << "Failed SDLNet_AllocPacket : " << SDLNet_GetError() << std::endl;
 		return false;
 	}
-	
+
 	//Setting Packet's Destination
 	packet->address = destination;
 
@@ -59,7 +59,7 @@ bool ClientSocket::Send(std::string* data) {
 
 	//Deallocate Packet
 	SDLNet_FreePacket(packet);
-	
+
 	return true;
 }
 
@@ -96,9 +96,9 @@ bool ClientSocket::Recieve(std::string* data) {
 			return false;
 		}
 		else if (status > 0) {
-			//Address of incoming packet 
+			//Address of incoming packet
 			std::cout << "Data Recieved from : " << SDLNet_ResolveIP(&packet->address) << " | " << SDLNet_Read16(&packet->address.port) << std::endl;
-			
+
 			//Setting end of data to null
 			packet->data[packet->maxlen - 1] = 0;
 
@@ -136,14 +136,14 @@ bool ClientSocket::Recieve(std::string* data) {
 //			std::cerr << "SDLNet_UDP_SEND: " << SDLNet_GetError() << std::endl;
 //			return false;
 //		}
-//		
+//
 //		error = SDLNet_UDP_Recv(socket, response);
 //
 //		if (!error)
-//			SDL_Delay(delay); 
+//			SDL_Delay(delay);
 //
 //	} while (!error || (response->data[0] != expect && response->data[0] != ERROR));
-//	
+//
 //	if (response->data[0] == ERROR) {
 //		std::cerr << "SDLNet_UDP_SEND: Recieved Error: " << response->data[0] << std::endl;
 //		return false;
@@ -162,7 +162,7 @@ bool ClientSocket::Recieve(std::string* data) {
 //
 //	do {
 //		currentTime = SDL_GetTicks();
-//		
+//
 //		if (currentTime - timeBegan > TIMEOUT) {
 //			std::cerr << "SDLNet_UDP_RECV: Connection timed out" << std::endl;
 //			return false;
